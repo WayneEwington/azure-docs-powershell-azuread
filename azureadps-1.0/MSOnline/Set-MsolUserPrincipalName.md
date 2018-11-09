@@ -30,6 +30,12 @@ Set-MsolUserPrincipalName -NewUserPrincipalName <String> [-ImmutableId <String>]
 The **Set-MsolUserPrincipalName** cmdlet changes the User Principal Name, or user ID, of a user.
 This cmdlet can be used to move a user between a federated and standard domain, which results in their authentication type changing to that of the target domain.
 
+**Warning:** This cmdlet will change the user's sign-in information for Microsoft 365.
+If the user has Skype for Business, they'll need to reschedule any Skype for Business meetings they organized and tell external contacts to update the contact information for them.
+If the user has OneDrive, then the URL will change. Other applications such as OneNote may need to be updated to use the changed OneDrive URL.
+The user will also need to update their username in any apps they use, like Outlook and any mobile apps.
+Make sure that the user is informed about these changes.
+
 ## EXAMPLES
 
 ### Example 1: Rename a user
